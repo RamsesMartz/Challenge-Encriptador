@@ -1,0 +1,435 @@
+/*Autor: Ramses Martinez*/
+
+body{
+    margin: 0; 
+    padding: 0;
+    background: #ccccda;    
+}
+
+p, span{
+    margin: 0;
+    padding: 0;
+}
+
+main{    
+    max-width: 1440px;    
+    height: 100vh;
+    background: #f3f5fc;
+    padding: 40px;
+    box-sizing: border-box;
+    margin: 0 auto;   
+    min-height: 580px;
+}
+
+.main-relleno{
+    width: 100%;
+    height: 100%;
+    position: relative;    
+}
+
+.izquierda, .centro, .derecha{
+    font-family: 'Inter',sans-serif;    
+    display: inline-block;
+    vertical-align: top;
+}
+
+.izquierda{
+    text-align: center;
+    width: 8.8235294%;
+    height: 100%;
+
+}
+
+.logo{    
+   height: 48px; 
+}
+
+.centro{
+    position: absolute;
+    width: 91.1764706%;     
+    height: 100%;
+    padding: 32px 480px 32px 80px;
+    min-width: 400px;
+    box-sizing: border-box;
+}
+.centro-relleno{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-width: 400px;
+}
+.centro-relleno-relleno-para-texto{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 165px;
+    padding-top: 96px;
+    box-sizing: border-box;
+}
+.texto-a-cifrar{
+    width: 100%;
+    height: 100%;
+    padding: 0;    
+    border: none;
+    font-family: inherit;
+    font-size: 2em;
+    color: #0a3871;
+    resize: none;   
+    background: transparent; 
+}
+.texto-a-cifrar:focus{
+    outline: none;     
+}
+.centro-relleno-para-botones{
+    position: absolute;    
+    width: 100%;
+    height: 101px;
+    bottom: 0;
+}
+
+.centro-relleno-relleno-para-aviso{ 
+    width: 100%;
+    height: 18px;
+    margin-bottom: 16px;
+    position: relative;
+    box-sizing: border-box;
+    
+}
+
+.centro-relleno-relleno-para-aviso p{
+    font-size: 0.75em;
+    color: #495057;    
+}
+.centro-relleno-relleno-para-aviso p span{
+    display: inline-block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: gray;
+    color: white;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.centro-relleno-relleno-para-botones{ 
+    width: 100%;
+    height: 67px;    
+}
+.encriptar{    
+    width: 48.2352941%;
+    height: 100%;
+    margin-right: 1.7647059%;
+    border-radius: 24px;
+    font-family: inherit;
+    color: white;
+    background: #0a3871;
+    border:1px solid #0a3871;    
+}
+.encriptar:hover{
+    background: #1e568f;
+}
+.desencriptar{
+    width: 48.2352941%;
+    height: 100%;    
+    margin-left: 1.7647059%;
+    border-radius: 24px;
+    font-family: inherit;
+    border:1px solid #0a3871;
+    background: #d8dfe8;
+    color: #0a3871;
+}
+.desencriptar:hover{
+    background: white;
+}
+.derecha{
+    position: absolute; 
+    background: white;
+    width: 29.4117647%;
+    min-width: 400px; /****3***/
+    height: 100%;        
+    padding: 32px;
+    border-radius: 32px;
+    box-sizing: border-box;  
+    right: 0;  /* pos 0 der*/
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+.derecha-relleno{
+    /* background: lightpink; */
+    width: 100%;
+    height: 100%;
+}
+.derecha-relleno-relleno-muneco-aviso{ 
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.derecha-relleno-relleno-muneco{ 
+    width: 100%;
+    height: 58.5227273%;
+    position: relative;
+    min-height: 304px;
+}
+.muneco{
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.derecha-relleno-relleno-aviso{ 
+    width: 100%;
+    height: 41.47722727%;
+    /* background: lightpink; */
+    padding-top: 32px;
+    box-sizing: border-box;
+    line-height: 48px;
+}
+.derecha-relleno-relleno-aviso-superior{ 
+    width: 100%;
+    height: 58px;
+    /* background: lime; */
+    padding-bottom: 8px;
+}
+.derecha-relleno-relleno-aviso-superior p{
+    margin: 0;
+    padding: 0;
+    /* background: sandybrown; */
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 28.8px;
+    color: #343A40;
+}
+.derecha-relleno-relleno-aviso-inferior{
+    width: 100%;
+    height: 48px;
+    /* background: lawngreen; */
+    padding-top: 8px;
+}
+.derecha-relleno-relleno-aviso-inferior p{
+    margin: 0;
+    padding: 0;
+    /* background: sandybrown; */
+    text-align: center;
+    line-height: 24px;
+    color: #495057;
+}
+
+.derecha-relleno-resultado{    /**********C*/
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.derecha-relleno-relleno-para-texto{    
+    width: 100%;
+    height: 100%;
+    /* background: orange; */
+    padding: 0 0 99px 0;
+    box-sizing: border-box;
+    
+}
+.decifrado{    
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: inherit;
+    font-size: 1.75em;
+    line-height: 36px;
+    color: #495057;
+    resize: none;
+    outline: none;
+}
+.derecha-relleno-relleno-para-boton{
+    position: absolute;
+    width: 100%;
+    height: 67px;
+    bottom: 0;
+}
+.bcopiar{
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    border: 1px solid #0a3871;
+    color: #0a3871;
+    background: white;
+}
+.bcopiar:hover{
+    background: #d8dfe8;
+}
+
+footer{   
+    max-width: 1440px;        
+    /* background: blueviolet; */
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0 auto;       
+    height: fit-content;
+}
+
+footer div{        
+    text-align: center;    
+    background: rgba(0, 0, 0,0.0);
+    color:  rgba(255, 255, 255,0.0);        
+    height: fit-content;
+    transition: 370ms;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.enlace{
+    cursor: pointer;
+}
+
+footer div:hover{
+    background: lightcoral;    
+    text-align: center;
+    background: rgba(5, 27, 72, 0.5);
+    color:  rgba(255, 255, 255,0.9);         
+    color: white;            
+}
+
+@media screen and (max-width:1134px) {    
+    .centro{
+        padding: 32px 400px 32px 0px; 
+        min-width: 200px;
+    }
+    .centro-relleno{
+       min-width: 200px; 
+    }
+    .derecha{
+       min-width: 350px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    main{
+        box-sizing: initial;
+        height: fit-content;
+        min-width: 525px;
+    }
+    .main-relleno{
+        position: initial;
+        display: block;
+        height: fit-content;                    
+    }
+    .izquierda, .centro, .derecha{
+        display: block;
+    }
+    .izquierda{
+        height: 51px;
+        width: fit-content;
+        margin-top: 33px;        
+        box-sizing: border-box;
+    }    
+    .logo{
+        height: 51px;
+        width: 31px;        
+    }
+    .centro{
+        position: initial;
+        padding: 20px 0 32px 0;
+        width: 100%;        
+    }
+    .texto-a-cifrar{
+        height: 528px;
+    }  
+    .derecha{
+        position: initial;
+        width: 100%;
+        min-width: 200px;
+        height: fit-content;        
+        margin-top: 32px;
+        
+    }
+    .derecha-relleno{
+        height: fit-content;
+        padding: 0;
+        margin: 0;
+    }
+    .derecha-relleno-relleno-muneco-aviso{        
+        padding: 0;
+        margin: 0;
+    }
+    .derecha-relleno-relleno-aviso-superior{
+        height: 29px;        
+    }
+    .derecha-relleno-relleno-aviso-inferior{
+        height: fit-content;
+        
+    }
+    .derecha-relleno-relleno-muneco{
+        display: none;
+    }
+    .derecha-relleno-relleno-aviso{
+        padding: 0;        
+    }
+    .decifrado{
+        height: 180px;
+    }
+    footer{
+        box-sizing: initial;
+        min-width: 525px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    main{
+        padding: 16px 16px 40px;       
+        /* min-width: 315px;  */
+        min-width: 315px;              
+    }    
+    .izquierda{
+        height: 48px;
+        margin-top: 8px;        
+    }
+    .logo{
+        width: 30px;
+        height: 48px;
+    }
+    .centro{
+        padding-top: 24px;
+    }
+    .centro-relleno-relleno-para-texto{
+        padding-top: 56px;
+        padding-bottom: 251px;
+    }
+    #texto-a-encriptar{
+        height: 235px;        
+    }
+    .centro-relleno-para-botones{ 
+        height: fit-content;                
+    }
+    .centro-relleno-relleno-para-botones{
+        display: block;
+        height: 100%;
+        width: 100%;             
+    }
+    .encriptar{
+        display: block;
+        height: 67px;
+        margin: 0 0 24px 0;
+        width: 100%;                
+    }
+    .desencriptar{
+        display: block;
+        height: 67px;
+        margin: 0;        
+        width: 100%;       
+    }
+    .derecha-relleno-relleno-aviso-superior{
+        height: 58px;
+    }
+    .derecha-relleno-relleno-aviso-inferior{
+        height: 48px;
+    }
+    footer{
+        padding: 0 16px;
+        min-width: 315px;              
+    }
+}

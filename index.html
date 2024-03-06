@@ -1,0 +1,68 @@
+
+<!DOCTYPE html> <!-- Autor: Ramses Martinez Soto -->
+<html lang="es"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador</title>
+        <link rel="icon" href="images/LogoAlura.png">
+        <link rel="stylesheet" href="estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body onresize="inicio()">  
+        <main id="main" >        
+            <div class="main-relleno">
+                <div class="izquierda"><img class="logo" src="Images/LogoAlura.png" alt=""></div>
+                <div class="centro">
+                    <div class="centro-relleno">
+                        <div class="centro-relleno-relleno-para-texto">
+                            <textarea placeholder="Ingrese el texto aqui" class="texto-a-cifrar" name="acifrar" id="texto-a-encriptar" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="centro-relleno-para-botones">
+                            <div class="centro-relleno-relleno-para-aviso">
+                                <p><span>!</span> Solo letras minúsculas y sin acentos.</p>
+                            </div>
+                            <div class="centro-relleno-relleno-para-botones"><button onclick="encriptar()" class="encriptar">Encriptar</button><button onclick="desencriptar()" class="desencriptar">Desencriptar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="derecha">
+                    <div class="derecha-relleno">
+                        <div id="id-mensaje" class="derecha-relleno-relleno-muneco-aviso">
+                            <div class="derecha-relleno-relleno-muneco">
+                                <img src="Images/Detective.png" alt="" class="muneco">
+                            </div>
+                            <div class="derecha-relleno-relleno-aviso">
+                                <div class="derecha-relleno-relleno-aviso-superior">
+                                    <p>Ningún mensaje fue encontrado</p>
+                                </div>
+                                <div class="derecha-relleno-relleno-aviso-inferior">
+                                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="id-resultado" class="derecha-relleno-resultado">
+                            <div class="derecha-relleno-relleno-para-texto">
+                                <textarea class="decifrado" name="decifrado_n" id="texto-resultado" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="derecha-relleno-relleno-para-boton">
+                                <button onclick="copiarAPortapapeles()" class="bcopiar">Copiar</button>
+                            </div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </main> 
+        <footer>
+            <div><p style="color: black;">Código: Ramses Martinez  -  Diseño: Alura Latam Team.  </p></div>
+            <div><a href="https://github.com/RamsesMartz/encriptador_alura"><img class="enlace" style="width: 20px;" src="Images/LogoGithub.png" alt="github-mark"></a></div>
+        </footer>
+        <script src="app.js"></script>
+    </body>
+</html>
